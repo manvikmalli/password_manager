@@ -10,9 +10,7 @@ def load_key():
         with open("cellar.py","wb")as f:
             f.write(key)
         return key
-def add_password():
-    site=input("Enter the site's name: ")
-    password=input("Enter the password: ")
+def add_password(site, password):
     key = load_key()
     cipher_suite = Fernet(key)
     pass_byte = password.encode('utf-8')

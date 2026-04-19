@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>Genrate a password</title>
+    </head>
+    <body>
+        <h1>The generated password is:</h1>
+        {% if password %}
+        <p>Your password is: {{ password }}</p>
+        {% endif %}
+        <a href="{{ url_for('home') }}"><button>Back to Home</button></a>
+    </body>
+</html>
